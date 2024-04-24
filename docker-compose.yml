@@ -1,0 +1,15 @@
+version: '3'
+services:
+  voila:
+    build: .
+    ports:
+      - "8866:8866"
+    # command: bash -c "voila --port=8866 --no-browser notebooks/zarr-visualization.ipynb"
+  nginx:
+    image: nginx:latest 
+    ports:
+      - "80:80"
+    volumes:
+      - ./voila.conf:/etc/nginx/conf.d/voila.conf
+    depends_on:
+      - voila

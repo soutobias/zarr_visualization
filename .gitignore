@@ -1,0 +1,16 @@
+*.egg-info
+.coverage
+.ipynb_checkpoints
+.DS_Store
+raw_data/
+*.csv
+**/__pycache__/
+.env
+notebooks/grib_data
+notebooks/json_data
+*grb*
+build/
+eccodes-*
+*.nc*
+credentials.json
+.python-version
